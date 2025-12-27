@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Om Paresh - Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: rgb(0, 0, 33);
+        color: white;
+        line-height: 1.6;
+      }
+
+      /* ================= NAVBAR ================= */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10%;
+        height: 80px;
+        background: rgb(18, 18, 62);
+      }
+
+      nav ul {
+        display: flex;
+        gap: 25px;
+        list-style: none;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        color: rgb(170, 123, 214);
+      }
+
+      .logo {
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+
+      /* ================= HERO ================= */
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px 10%;
+        gap: 40px;
+      }
+
+      .hero-text {
+        flex: 1;
+        font-size: 2.5rem;
+      }
+
+      .hero-text span {
+        color: rgb(170, 123, 214);
+      }
+
+      .buttons {
+        margin-top: 30px;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 12px 20px;
+        background: #1e2167;
+        border: 2px solid white;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .btn:hover {
+        background: rgb(170, 123, 214);
+        border-color: rgb(170, 123, 214);
+      }
+
+      .hero-img {
+        flex: 1;
+        text-align: center;
+      }
+
+      .hero-img img {
+        width: 80%;
+        max-width: 350px;
+      }
+
+      /* ================= EXPERIENCE ================= */
+      .experience {
+        max-width: 1100px;
+        margin: auto;
+        padding: 60px 20px;
+      }
+      .education {
+        max-width: 1100px;
+        margin-top: -70px;
+        padding: 10px 20px;
+        margin-left: 205px;
+      }
+      .education h1 {
+        margin: 0 0 10px;
+      }
+      .experience h1 {
+        margin: 10px 0 40px;
+      }
+      .education-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 6px;
+      }
+
+      .job {
+        margin-bottom: 40px;
+        border-left: 3px solid rgb(170, 123, 214);
+        padding-left: 20px;
+      }
+      .school {
+        margin-bottom: 10px;
+        border-left: 3px solid rgb(170, 123, 214);
+        padding-left: 20px;
+      }
+
+      .job h3 {
+        font-size: 1.2rem;
+      }
+
+      .company-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 6px;
+      }
+      .company-row2 {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 6px;
+      }
+
+      .company-row1 {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 6px;
+      }
+
+      .company-row img {
+        width: 60px;
+        background: white;
+        padding: 4px;
+        border-radius: 6px;
+        object-fit: contain;
+      }
+      .company-row1 img {
+        width: 50px;
+        background: white;
+        height: 30px;
+        padding: 4px;
+        border-radius: 6px;
+        object-fit: contain;
+      }
+      .company-row2 img {
+        width: 50px;
+        background: white;
+        height: 30px;
+        padding: 4px;
+        border-radius: 6px;
+        object-fit: contain;
+      }
+
+      .company {
+        color: #ccc;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .job p {
+        margin-top: 10px;
+        color: #aaa;
+        font-size: 0.95rem;
+      }
+
+      /* ================= FOOTER ================= */
+      footer {
+        background: #0e0e1a;
+        margin-top: 40px;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 30px 10%;
+        gap: 20px;
+      }
+
+      .footer ul {
+        list-style: none;
+      }
+
+      .footer li {
+        margin: 8px 0;
+      }
+
+      .footer a {
+        color: white;
+        text-decoration: none;
+        margin-left: 6px;
+      }
+
+      .copyright {
+        text-align: center;
+        color: gray;
+        font-size: 0.85rem;
+        padding: 15px;
+      }
+
+      /* ================= MOBILE ================= */
+      @media (max-width: 600px) {
+        nav {
+          flex-direction: column;
+          height: auto;
+          padding: 15px;
+        }
+
+        .hero {
+          flex-direction: column;
+          text-align: center;
+          padding: 50px 20px;
+        }
+
+        .hero-text {
+          font-size: 1.6rem;
+        }
+
+        .company-row img {
+          width: 45px;
+        }
+
+        .footer {
+          justify-content: center;
+          text-align: center;
+        }
+        .education {
+          max-width: 1100px;
+          margin-top: -70px;
+          padding: 10px 20px;
+          margin-left: 0px;
+        }
+      }
+
+      /* ================= TABLET ================= */
+      @media (min-width: 601px) and (max-width: 900px) {
+        .hero-text {
+          font-size: 2rem;
+        }
+      }
+
+      /* ================= LAPTOP ================= */
+      @media (min-width: 901px) and (max-width: 1200px) {
+        .hero-text {
+          font-size: 2.3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="logo">Om Paresh's Portfolio</div>
+      <ul>
+        <li><a href="#home">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        Hi, My name is <span>Om Paresh</span><br />
+        and I am a <span id="element"></span>
+
+        <div class="buttons">
+          <a href="Om Paresh.pdf" download
+            ><button class="btn">Download Resume</button></a
+          >
+          <a href="https://github.com/ompareshbehera" target="_blank"
+            ><button class="btn">GitHub</button></a
+          >
+          <a href="https://www.linkedin.com/in/ompareshbehera/" target="_blank"
+            ><button class="btn">LinkedIn</button></a
+          >
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <img src="quantum.png" alt="Profile Image" />
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="experience">
+      <span style="color: rgb(170, 123, 214)">What I have done so far</span>
+      <h1>Work Experience</h1>
+
+      <div class="job">
+        <h3>Business Analyst (July 2025 – Present)</h3>
+        <div class="company-row2">
+          <img
+            src="https://th.bing.com/th/id/OIP.YHJZc_qEHHT-5GfTNU3L4AHaBJ?w=378&h=59&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            alt="Idea Infinity"
+          />
+          <div class="company">Idea Infinity IT Solution Pvt Ltd</div>
+        </div>
+        <p>
+          Conducting detailed business analysis, process improvements, UAT
+          coordination, and delivering scalable IT solutions.
+        </p>
+      </div>
+
+      <div class="job">
+        <h3>Business Analyst (May 2023 – July 2025)</h3>
+        <div class="company-row1">
+          <img
+            src="https://www.freepnglogos.com/uploads/ibm-logo-png/ibm-logo-png-transparent-svg-vector-bie-supply-3.png"
+            alt="IBM"
+          />
+          <div class="company">IBM</div>
+        </div>
+        <p>
+          Conducting detailed business analysis, process improvements, UAT
+          coordination, and delivering scalable IT solutions.
+        </p>
+      </div>
+
+      <div class="job">
+        <h3>Business Analyst (Jan 2022 – May 2023)</h3>
+        <div class="company-row">
+          <img
+            src="https://companieslogo.com/img/orig/STAN.L_BIG-27b2637e.png?t=1720244494"
+            alt="Standard Chartered"
+          />
+          <div class="company">Standard Chartered</div>
+        </div>
+        <p>
+          Gathered business requirements, created BRDs, collaborated with
+          stakeholders, and translated business needs into technology solutions.
+        </p>
+      </div>
+    </section>
+    <!-- Education -->
+    <section id="education" class="education">
+      <h1>Education</h1>
+      <div class="school">
+        <h3>Master of Business Administration</h3>
+        <div class="education-row">
+          <div class="company">Fakir Mohan University, Balasore</div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer id="contact">
+      <div class="footer">
+        <h3>Om Paresh's Portfolio</h3>
+        <ul>
+          <li>
+            <i class="fa-regular fa-envelope"></i>
+            <a href="mailto:ompareshbehera45@gmail.com">Gmail</a>
+          </li>
+          <li>
+            <i class="fa-brands fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/ompareshbehera/"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/ompareshbehera" target="_blank"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        © 2026 ompareshportfolio.com | All rights reserved
+      </div>
+    </footer>
+
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.0.12"></script>
+    <script>
+      new Typed("#element", {
+        strings: ["Business Analyst"],
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
